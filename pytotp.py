@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 """
-Put TOTP key for service SERVID to GPG file crypted for 'My TOTP'
-  gpg -e -r 'My TOTP' > ~/.config/mytotp/SERVID.gpg
+Put TOTP key for service SERVID to GPG file crypted for 'Py TOTP'
+  gpg -e -r 'Py TOTP' > ~/.config/pytotp/SERVID.gpg
 """
 
 import subprocess
@@ -10,7 +10,7 @@ import sys
 import time
 from datetime import datetime
 
-KEYDIR = os.path.expanduser('~/.config/mytotp')
+KEYDIR = os.path.expanduser('~/.config/pytotp')
 KEYEXT = '.gpg'
 SERVID = sys.argv[1]
 
