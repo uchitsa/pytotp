@@ -2,10 +2,10 @@
 
 ### Usage:
 
-* create a direcrory for TOTP keys mkdir -p ~/.config/mytotp
+* create a direcrory for TOTP keys mkdir -p ~/.config/pytotp
 
-* gpg --yes --batch --passphrase 'Some-words' --quick-generate-key "My TOTP"
+* gpg --yes --batch --passphrase 'Some-words' --quick-generate-key "Py TOTP"
 
-* gpg -e -r "My TOTP" >~/.config/mytotp/<SERVID>.gpg
+* gpg -e -r "Py TOTP" >~/.config/pytotp/<SERVID>.gpg
 
-* python3 mytotp.sh <SERVID>
+* python3 pytotp.py <SERVID>
