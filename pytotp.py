@@ -15,7 +15,8 @@ KEYEXT = '.gpg'
 SERVID = sys.argv[1]
 
 if not SERVID:
-    print("Usage: {} SERVID\n\tSERVID is a service ID, abbreviated, w/o ext:".format(sys.argv[0]))
+    print("Usage: {} SERVID\n\tSERVID is a service ID, abbreviated, w/o ext:"
+          .format(sys.argv[0]))
     available_keys = [f.replace(KEYDIR + '/', '').replace(KEYEXT, '') for f in os.listdir(KEYDIR) if f.endswith(KEYEXT)]
     print('\n'.join(available_keys))
     exit(2)
@@ -35,7 +36,8 @@ if wait_time > 30:
 print("Seconds: {} (wait {}) ...".format(now_seconds, wait_time))
 time.sleep(wait_time)
 
-totp = subprocess.check_output(['oathtool', '-b', '--totp', '-'], input=skey.encode('utf-8')).decode('utf-8').strip()
+totp = subprocess.check_output(['oathtool', '-b', '--totp', '-'],
+                               input=skey.encode('utf-8')).decode('utf-8').strip()
 
 print(totp)
 skey = "none"
