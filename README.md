@@ -1,3 +1,4 @@
+[![Hits-of-Code](https://hitsofcode.com/github/uchitsa/pytotp?branch=main)](https://hitsofcode.com/github/uchitsa/pytotp/view?branch=main)
 ## Python TOTP 2FA
 
 ### Usage:
